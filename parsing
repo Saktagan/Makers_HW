@@ -1,0 +1,25 @@
+import csv
+import requests
+from bs4 import BeautifulSoup
+from urllib.request import urlopen
+import lxml
+
+url = "https://lalafo.kg/kyrgyzstan/mobilnye-telefony-i-aksessuary/mobilnye-telefony"
+html = urlopen(url)
+soup = BeautifulSoup(html, 'lxml')
+main_ = soup.find('div', class_="mr-3")
+articles = main_.find_all('article', class_='listing-item')
+data = {}
+with open('data', 'w', newline='') as f:
+    thewriter = csv.writer(f)
+    for article in articles:
+        try:
+            name = article.find('a', class_="listing-item-title").get_text()
+            name = name.strip()
+            price = article.find('p', class_='listing-item-title').get_text()
+            price = price.strip()
+            photo = article.find('img', class_="listing-item-photo link-image")
+            photo = photo['src']
+            thewriter.writerow([name, price, photo])
+        except TypeError:
+            print('ERROR')
