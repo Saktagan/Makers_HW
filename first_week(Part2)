@@ -1,0 +1,194 @@
+# Task 1
+# name = "Saktagan"
+# print("Hello" + ", " + name + "!")
+
+
+# Task 2
+# Each N student will take K apples, and remains X
+# number_students = int(input())
+# apple_amount = int(input())
+# k = apple_amount // number_students
+# x = apple_amount % number_students
+# print('Each of ' + str(number_students) + ' student will take ' + str(k) +
+#       ' apples, and remains ' + str(x))
+
+
+# Task 3
+# The next number for the number 179 is 180. The previous number for the number 179 is 178.
+# number = int(input())
+# print('The next number for the number ' + str(number) + ' is ' + str(number + 1) +
+#       '. The previous number for the number '+  str(number) + ' is ' + str(number - 1)  + '.')
+
+# Task 4
+# 6, 1, 30, 6, 2, 10 result 40 sec.
+# time1 = '6, 1, 30'
+# time2 = '6, 2, 10'
+# list_time1 = time1.split(",")
+# list_time2 = time2.split(",")
+# time1_sec = int(list_time1[0])*60*60 + int(list_time1[1])*60 + int(list_time1[2])
+# time2_sec = int(list_time2[0])*60*60 + int(list_time2[1])*60 + int(list_time2[2])
+# print(str(time2_sec - time1_sec) + "seconds")
+
+# Task 5
+# first_class_students = 20
+# second_class_students = 21
+# third_class_students = 22
+# total_students = first_class_students + second_class_students + third_class_students
+# desk_number = total_students // 2
+# if total_students % 2 == 1:
+#     desk_number += 1
+# print('We need ' + str(desk_number) + ' desks.')
+
+# Task 6
+# given_num = int(input())
+# if given_num < 10:
+#     print(0)
+# else:
+#     print(str(given_num // 10)[-1])
+
+
+# Task 7
+# num = int(input())
+# if num == 0:
+#     print(0)
+# elif num > 0:
+#     print(1)
+# else:
+#     print(-1)
+
+
+# Task 8
+# start = int(input())
+# end = int(input())
+# for i in range(start,end+1,1):
+#     print(i, end = ' ')
+
+
+# Task 9
+# sum = 0
+# count = 0
+# while(count < 10):
+#     a = int(input())
+#     count += 1
+#     sum += a
+# print(sum)
+
+# Task 10
+# result = 1
+# num = int(input())
+# if num>0:
+#     for i in range(1, num+1):
+#         result *= i
+# else:
+#     result = 'Error'
+# print(result)
+
+
+# Task 11
+# s = input()
+# print(s[2])
+# print(s[1:])
+# print(s[:5])
+# print(s[-2:])
+# print(s[::2])
+# print(s[1::2])
+# print(s[::-1])
+# print(s[::-2])
+# print(len(s))
+
+
+# # Task 12
+# f = 'It is 8 o\'clock in the evening'
+# print(f.count(" ") + 1)
+
+# Task 13
+
+# Task 14
+# s = input()
+# if s.count('f') == 1:
+#     print(s.find('f'))
+# elif s.count('f') > 1:
+#     print(str(s.find('f')) + ' ')
+#     print(s.rfind('f'))
+
+
+# Task 15
+# n = int(input())
+# for i in range(0, n+1):
+#     sq = i*i
+#     if sq <= n:
+#         print(sq, end = ' ')
+
+
+# Task 16
+# Given a list of numbers, find and print all elements that are an even number. In this case use a
+# for-loop that iterates over the list, and not over its indices! That is, don't use range()
+# numbers = [5, 6, 8, 566, 9645, 0, -46541, -454]
+# for x in numbers:
+#     if x%2 == 0:
+#         print(x)
+
+
+# Task 17
+# a = [1, 2, 3, 4, 6, 7, 8]
+# for i in range(0, len(a)):
+#     if (i+1) not in a:
+#         print(i+1)
+
+
+# Task 18
+# age = int(input())
+# if age % 2 == 0:
+#     for i in range(2,age+1,2):
+#         print(i)
+# else:
+#     for i in range(1,age+1,2):
+#         print(i)
+
+
+# Task 19
+# earth_weight = int(input("What is weight on Earth: "))
+# for i in range(1, 15+1):
+#     moon_weight = (earth_weight + i) * 0.165
+#     print(moon_weight)
+
+
+# # Task 20
+# office_by_num = {1: 'google_kazakstan.txt', 2: 'google_paris.txt', 3: 'google_uar.txt', 4: 'google_kyrgystan.txt',
+#                  5: 'google_san_francisco.txt', 6: 'google_germany.txt', 7: 'google_moscow.txt',
+#                  8: 'google_sweden.txt'}
+# print('Hello\nThere is list of offices:\n1)google_kazakstan.txt \n2)google_paris.txt\n3)google_uar.txt\n'
+#       '4)google_kyrgystan.txt\n5)google_san_francisco.txt\n6)google_germany.txt\n7)google_moscow.txt\n'
+#       '8)google_sweden.txt')
+# office_num = int(input("Choose number of office: "))
+# create_file = open(office_by_num[office_num], "w")
+# print("Write your comments here:")
+# create_file.write(input())
+# create_file.close()
+# # google_file = open(office_by_num[office_num], "r")
+# # print(google_file.read())
+
+# Task 21
+
+
+
+
+# # Task 22
+# num = int(input())
+# max = 0
+# min = 0
+# count = 0
+# sum = 0
+# if num>=2 and num<=10**6:
+#     s = input()
+#     if 'u' in s.lower() or 'd' in s.lower():
+#         while(count<num):
+#             if s[count].lower() == 'u':
+#                 sum += 1
+#                 if sum>max:
+#                     max=sum
+#             elif s[count].lower() == 'd':
+#                 sum -= 1
+#         u_count = s.count('u')
+#         d_count = s.count('d')
+#         # print(abs(u_count - d_count))
